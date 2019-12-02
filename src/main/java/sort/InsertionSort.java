@@ -8,9 +8,9 @@ import java.util.Comparator;
  * @date: 2019-12-01
  * @version: 1.0
  */
-public class Insertion extends AbstractSort {
+public class InsertionSort extends AbstractSort {
 
-    private Insertion() {
+    private InsertionSort() {
     }
 
     /**
@@ -113,8 +113,8 @@ public class Insertion extends AbstractSort {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-        String[] a = new String[]{"A", "P", "T", "C"};
-        Insertion.sort(a);
+        Integer[] a = getRandomInput(10);
+        InsertionSort.sort(a);
         show(a);
     }
 

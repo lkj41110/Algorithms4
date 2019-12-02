@@ -1,6 +1,7 @@
 package sort;
 
 import java.util.Comparator;
+import java.util.Random;
 
 /**
  * @author luokai
@@ -88,5 +89,21 @@ public class AbstractSort {
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + " ");
         }
+    }
+
+    /**
+     * 产生N个随机数用来排序
+     * 小于1000
+     *
+     * @param N
+     * @return
+     */
+    protected static Integer[] getRandomInput(int N) { // 使用算法1将T个长度为N的数组排序
+        Random random = new Random();
+        Integer[] a = new Integer[N];
+        for (int i = 0; i < N; i++) {
+            a[i] = random.nextInt(1000);
+        }
+        return a;
     }
 }
