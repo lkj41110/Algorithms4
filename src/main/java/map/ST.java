@@ -40,12 +40,11 @@ public interface ST<K, V> {
     boolean contains(K key);
 
     /**
-     * 是否包含
+     * 是否为空
      *
-     * @param key
      * @return
      */
-    boolean isEmpty(K key);
+    boolean isEmpty();
 
     /**
      * 获取有多少数量
