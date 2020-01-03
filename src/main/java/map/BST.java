@@ -12,8 +12,6 @@ public class BST<Key extends Comparable, Value> implements ST<Key, Value> {
 
     private Node root;
 
-    private int max = 0;
-
     private class Node {
         private Key key;
         private Value value;
@@ -23,37 +21,28 @@ public class BST<Key extends Comparable, Value> implements ST<Key, Value> {
          * 以当前节点为root的总节点数
          */
         private int n;
-        /**
-         * 层高
-         */
-        private int high;
 
-        public Node(Key key, Value value, int n, int high) {
+        public Node(Key key, Value value, int n) {
             this.key = key;
             this.value = value;
             this.n = n;
-            this.high = high;
         }
     }
 
     @Override
     public void put(Key key, Value value) {
-        root = put(key, value, root, 1);
+        root = put(key, value, root);
     }
 
-    private Node put(Key key, Value value, Node node, int high) {
+    private Node put(Key key, Value value, Node node) {
         if (node == null) {
-            Node temp = new Node(key, value, 1, high + 1);
-            if (temp.high > max) {
-                max = temp.high;
-            }
-            return temp;
+            return new Node(key, value, 1);
         }
         int cmd = key.compareTo(node.key);
-        if (cmd > 0) {
-            node.left = put(key, value, node.left, high + 1);
-        } else if (cmd < 0) {
-            node.right = put(key, value, node.right, high + 1);
+        if (cmd < 0) {
+            node.left = put(key, value, node.left);
+        } else if (cmd > 0) {
+            node.right = put(key, value, node.right);
         } else {
             node.value = value;
         }
@@ -73,9 +62,9 @@ public class BST<Key extends Comparable, Value> implements ST<Key, Value> {
         if (node == null) {
             return null;
         }
-        if (key.compareTo(node.key) > 0) {
+        if (key.compareTo(node.key) < 0) {
             return get(key, node.left);
-        } else if (key.compareTo(node.key) < 0) {
+        } else if (key.compareTo(node.key) > 0) {
             return get(key, node.right);
         } else {
             return node.value;
@@ -84,7 +73,50 @@ public class BST<Key extends Comparable, Value> implements ST<Key, Value> {
 
     @Override
     public void delete(Key key) {
+        root = delete(root, key);
+    }
 
+    private Node delete(Node node, Key key) {
+        if (node == null) {
+            return null;
+        }
+        int cmd = key.compareTo(node.key);
+        if (cmd < 0) {
+            node.left = delete(node.left, key);
+        } else if (cmd > 0) {
+            node.right = delete(node.right, key);
+        } else {
+            //删除逻辑
+            if (node.left == null) {
+                return node.right;
+            }
+            if(node.right == null){
+                return node.left;
+            }
+            //找出最小的节点
+            Node min = min(node.right);
+            min.left = node.left;
+            min.right = deleteMin(min.right);
+            node = min;
+        }
+        node.n = size(node.left) + size(node.right) + 1;
+        return node;
+    }
+
+    /**
+     * 删除最小节点
+     */
+    public void deleteMin() {
+        root = deleteMin(root);
+    }
+
+    private Node deleteMin(Node node) {
+        if (node.left == null) {
+            return node.right;
+        }
+        node.left = deleteMin(node.left);
+        node.n = size(node.left) + size(node.right) + 1;
+        return node;
     }
 
     @Override
@@ -102,6 +134,22 @@ public class BST<Key extends Comparable, Value> implements ST<Key, Value> {
         return size(root);
     }
 
+    @Override
+    public Value min() {
+        Node min = min(root);
+        if (min == null) {
+            return null;
+        }
+        return min.value;
+    }
+
+    private Node min(Node node) {
+        if (node.left == null) {
+            return node;
+        }
+        return min(node.left);
+    }
+
     private int size(Node node) {
         if (node == null) {
             return 0;
@@ -109,20 +157,22 @@ public class BST<Key extends Comparable, Value> implements ST<Key, Value> {
         return node.n;
     }
 
-    @Override
-    public String toString() {
-        //TODO 中序遍历 + 格式化
-        return null;
-    }
 
     public static void main(String[] args) {
         BST bst = new BST();
-        bst.put(1, "A1");
-        bst.put(5, "A5");
-        bst.put(9, "A9");
-        bst.put(7, "A7");
+        bst.put(41, 41);
+        bst.put(18, 18);
+        bst.put(55, 55);
+        bst.put(14, 14);
+        bst.put(13, 13);
+        bst.put(32, 32);
+        bst.put(35, 35);
 
-        System.out.println(bst);
+        System.out.println(bst.min());
+        bst.delete(18);
+        System.out.println(bst.min());
+
+
     }
 
 }

@@ -70,6 +70,11 @@ public class BinarySearchST<Key extends Comparable, Value> implements ST<Key, Va
     }
 
     @Override
+    public Value min() {
+        return null;
+    }
+
+    @Override
     public String toString() {
         return "{" + "keys=" + Arrays.toString(keys) +
                 ",\r\nvalues=" + Arrays.toString(values) +

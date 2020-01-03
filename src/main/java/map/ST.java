@@ -52,4 +52,11 @@ public interface ST<K, V> {
      * @return
      */
     int size();
+
+    /**
+     * 获取最小值
+     *
+     * @return
+     */
+    V min();
 }
