@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.other;
 
 /**
  * 第k大的数两种方法：

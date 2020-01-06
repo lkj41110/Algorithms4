@@ -1,4 +1,4 @@
-package leetcode.ranxin;
+package leetcode.tanxin;
 
 public class Solution {
 

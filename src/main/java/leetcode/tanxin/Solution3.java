@@ -1,4 +1,4 @@
-package leetcode.ranxin;
+package leetcode.tanxin;
 
 
 import java.util.LinkedList;
