@@ -2,7 +2,9 @@ package leetcode.other;
 
 
 /**
- * 假设有n个数
+ * 289. 生命游戏
+ * 进阶：
+ * 原地算法
  */
 public class Solution289 {
 
