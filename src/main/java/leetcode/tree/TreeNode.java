@@ -20,7 +20,7 @@ public class TreeNode {
         val = x;
     }
 
-    TreeNode(int[] num) {
+    public TreeNode(int[] num) {
         //[1,null,0,0,1]
         if (num.length == 0)
             return;
