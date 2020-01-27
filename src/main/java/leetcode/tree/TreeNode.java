@@ -9,13 +9,14 @@ import java.util.LinkedList;
  * @version: 1.0
  */
 public class TreeNode {
-    int val;
+    public int val;
     public TreeNode left;
     public TreeNode right;
 
     TreeNode(Integer x) {
         val = x;
     }
+
     public TreeNode(int x) {
         val = x;
     }
@@ -38,7 +39,7 @@ public class TreeNode {
                     l.add(pop.left);
                 }
                 i++;
-                if(i>=num.length)
+                if (i >= num.length)
                     return;
                 if (num[i] == -1) {
                     pop.right = null;
@@ -47,7 +48,7 @@ public class TreeNode {
                     l.add(pop.right);
                 }
                 i++;
-                if(i>=num.length)
+                if (i >= num.length)
                     return;
             }
         }
