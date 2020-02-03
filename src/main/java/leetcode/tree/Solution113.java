@@ -74,16 +74,18 @@ public class Solution113 {
             } else if (type == 1) {
                 nNode = treeNode.right;
                 stack.push(new Pair<>(treeNode, type - 1, pop.getValue()));
-            }
-            if (nNode != null) {
-                stack.push(new Pair<>(nNode, 2, pop.getValue() + nNode.val));
-            }else{
+            } else if (type == 0) {
                 //nNode 为空 代表，已经在叶子节点
                 if (pop.getValue() == sum && treeNode.right == null && treeNode.left == null) {
                     List<Integer> list1 = getList(stack, treeNode);
                     list.add(list1);
                 }
             }
+
+            if (nNode != null) {
+                stack.push(new Pair<>(nNode, 2, pop.getValue() + nNode.val));
+            }
+
         }
         return list;
     }
@@ -103,7 +105,7 @@ public class Solution113 {
 
     public static void main(String[] args) {
         Solution113 solution = new Solution113();
-        List<List<Integer>> lists = solution.pathSum(new TreeNode(new int[]{5,4,8,11,-1,13,4,7,2,-1,-1,5,1}),22);
-        //List<List<Integer>> lists = solution.pathSum(new TreeNode(new int[]{1, 2}), 1);
+        //List<List<Integer>> lists = solution.pathSum(new TreeNode(new int[]{5,4,8,11,-1,13,4,7,2,-1,-1,5,1}),22);
+        List<List<Integer>> lists = solution.pathSum(new TreeNode(new int[]{1, 2}), 1);
     }
 }
