@@ -3,48 +3,6 @@ package leetcode.linkedlist;
 /**
  */
 public class Solution2 {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        int size1, size2;
-        //计算出两个列表的数
-        ListNode temp;
-        temp = l1;
-        size1 = 0;
-        while (temp != null) {
-            size1++;
-            temp = temp.next;
-        }
-        temp = l2;
-        size2 = 0;
-        while (temp != null) {
-            size2++;
-            temp = temp.next;
-        }
-        ListNode res = new ListNode(0);
-        temp = res;
-        //头指针
-        ListNode temp1, temp2;
-        int preSize;
-        if (size1 > size2) {
-            preSize = size1 - size2 - 1;
-            while (preSize-- > 0 && l1 != null) {
-                temp.next = new ListNode(l1.val);
-                temp = temp.next;
-                l1 = l1.next;
-            }
-            temp1 = l1;
-            temp2 = new ListNode(0);
-            temp2.next = l2;
-        } else if (size2 > size1) {
-            preSize = size2 - size1;
-        }
-
-        while (l1 != null && l2 != null) {
-
-        }
-
-
-        return res.next;
-    }
 
     public ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
         ListNode res = new ListNode(0);

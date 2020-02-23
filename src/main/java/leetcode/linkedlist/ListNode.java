@@ -13,7 +13,14 @@ public class ListNode {
         ListNode temp = this;
         for (int i = 1; i < list.length; i++) {
             temp.next = new ListNode(list[i]);
-            temp = next;
+            temp = temp.next;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "val=" + val +
+                '}';
     }
 }
