@@ -1,51 +1,68 @@
 package leetcode.test;
 
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
- * 验证 回文串
+ * 分割回文串
  */
 class Solution2 {
-    public boolean isPalindrome(String s) {
-        s = s.toLowerCase();
-        int length = s.length();
-        int tail = length - 1;
-        for (int i = 0; i < length && tail >= 0; i++, tail--) {
-            char h1 = s.charAt(i);
-            while (!check(h1) && i <= tail && i < length-1) {
-                i++;
-                h1 = s.charAt(i);
+    public List<List<String>> partition(String s) {
+        List<List<String>> res = new ArrayList<>();
+
+        if (s.length() == 0) {
+            return res;
+        }
+        Deque<String> temp = new LinkedList<>();
+        doPartition(s, 0, res, temp);
+
+        return res;
+
+    }
+
+    private void doPartition(String s, int start, List res, Deque temp) {
+        if (start == s.length()) {
+            res.add(new ArrayList<>(temp));
+            return;
+        }
+
+        for (int i = start; i < s.length(); i++) {
+            if (!checkPalindrome(s, start,  i)) {
+                continue;
             }
-            char h2 = s.charAt(tail);
-            while (!check(h2) && i <= tail&&tail>=1) {
-                tail--;
-                h2 = s.charAt(tail);
-            }
-            if (i >= tail) {
-                return true;
-            }
-            if (h1 != h2) {
+            temp.addLast(s.substring(start,  i + 1));
+            doPartition(s,  i + 1, res, temp);
+            temp.removeLast();
+
+        }
+    }
+
+    /**
+     * 判断是否是回文
+     *
+     * @param str
+     * @param left
+     * @param right
+     * @return
+     */
+    private boolean checkPalindrome(String str, int left, int right) {
+        // 严格小于即可
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
                 return false;
             }
-
+            left++;
+            right--;
         }
         return true;
     }
 
-    private boolean check(char ch) {
-        if ('0' <= ch && ch <= '9') {
-            return true;
-        }
-        if ('a' <= ch && ch <= 'z') {
-            return true;
-        }
-        if ('A' <= ch && ch <= 'Z') {
-            return true;
-        }
-        return false;
-    }
 
     public static void main(String[] args) {
         Solution2 a = new Solution2();
-        boolean palindrome = a.isPalindrome(".,");
+        List<List<String>> palindrome = a.partition("aab");
         System.out.println(palindrome);
     }
 }
