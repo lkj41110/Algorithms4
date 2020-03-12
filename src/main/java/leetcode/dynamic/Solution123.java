@@ -1,8 +1,5 @@
 package leetcode.dynamic;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 股票 通用模式
  */
@@ -36,7 +33,7 @@ public class Solution123 {
     public static void main(String[] args) {
         Solution123 solution = new Solution123();
         //int[][] a = {{2}, {3, 4}, {6, 5, 7}, {4, 1, 8, 3}};
-        System.out.println(solution.minimumTotal(a));
+        //System.out.println(solution.minimumTotal(a));
     }
 
 
