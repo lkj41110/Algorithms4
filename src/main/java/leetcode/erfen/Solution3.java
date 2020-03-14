@@ -8,7 +8,7 @@ package leetcode.erfen;
  * ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+public class Solution3 {
     public boolean search(int[] nums, int target) {
 
         int s = 0, e = nums.length - 1;
@@ -71,7 +71,7 @@ class Solution {
 
     public static void main(String[] args) {
         int a[] = {1,1,1,1,3,1,1,1,1,1,1,1,1};
-        Solution solution = new Solution();
+        Solution3 solution = new Solution3();
         System.out.println(solution.search(a, 3));
     }
 }
