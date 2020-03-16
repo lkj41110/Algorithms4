@@ -30,4 +30,48 @@ class Solution50 {
     }
 
 
+    public String compressString(String S) {
+        if (S.length() == 0) {
+            return "";
+        }
+        StringBuilder sb = new StringBuilder();
+        char last = S.charAt(0);
+        int num = 1;
+        for (int i = 1; i < S.length(); i++) {
+            char ch = S.charAt(i);
+            if (ch == last) {
+                num++;
+            } else {
+                sb.append(last).append(num);
+                last = ch;
+                num = 1;
+            }
+        }
+        sb.append(last).append(num);
+        return sb.toString().length()>=S.length()?S:sb.toString();
+    }
+
+
+    public static void main(String[] args) {
+        Solution50 solution50 = new Solution50();
+        String aabcccccaa = solution50.compressString("");
+        System.out.println(aabcccccaa);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
