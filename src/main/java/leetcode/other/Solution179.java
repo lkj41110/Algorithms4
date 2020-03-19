@@ -17,15 +17,14 @@ public class Solution179 {
     private void quickNums(int[] nums, int s, int e) {
         if (s >= e) return;
         int temp = nums[s];
-        int ts = s + 1;
-        int te = e;
-        while (ts < te) {
-            while (ts <= te && swap(temp, nums[ts])) {
-                ts++;
+        int ts = s;
+        int te = e + 1;
+        while (true) {
+            while (swap(temp, nums[++ts])) {
+                if (ts == e) break;
             }
-            if (ts == te) break;
-            while (ts <= te && swap(nums[te], temp)) {
-                ts++;
+            while (swap(nums[--te], temp)) {
+                if (te == s) break;
             }
             if (ts >= te) break;
             exch(nums, s, e);
@@ -65,11 +64,11 @@ public class Solution179 {
 
     public static void main(String[] args) {
         Solution179 solution = new Solution179();
-        //int[] a = {0, 0, 0};
-        int[] a = {0, 2, 2, 3, 0, 1, 2, 3, -1, -4, 2};
-        System.out.println(solution.threeSum(a));
-        //int[] b = {3, 2, 3, 1, 2, 4, 5, 5, 6};
-        //System.out.println(solution.threeSum(b, 4));
+        //int[] a = {3,30,34,5,9};
+        int[] a = {3, 2,1};
+        System.out.println(solution.largestNumber(a));
+
+        solution.swap(1, 2);
     }
 
 
