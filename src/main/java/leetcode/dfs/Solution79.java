@@ -38,6 +38,7 @@ public class Solution79 {
         if (board[i][j] != word.charAt(start)) {
             return false;
         }
+
         //a[i][j] = 1;
         char temp = board[i][j];
         board[i][j] = ' ';
@@ -55,9 +56,15 @@ public class Solution79 {
     }
 
     public static void main(String[] args) {
-        Solution79 solution = new Solution79();
-        char[][] a = {{'C', 'A', 'A'}, {'A', 'A', 'A'}, {'B','C', 'D'}};
-        System.out.println(solution.exist(a,"AAB"));
+        //Solution79 solution = new Solution79();
+        //char[][] a = {{'C', 'A', 'A'}, {'A', 'A', 'A'}, {'B','C', 'D'}};
+        //System.out.println(solution.exist(a,"AAB"))
+
+        System.out.println('z'-'A');
+        System.out.println('A'-'A');
+
+
+        ;
     }
 
 
