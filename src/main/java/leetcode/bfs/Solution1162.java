@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * 深搜
+ * 广搜， 多源发散
  */
 public class Solution1162 {
     public int maxDistance(int[][] grid) {
