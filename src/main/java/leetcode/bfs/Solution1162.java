@@ -40,12 +40,4 @@ public class Solution1162 {
         return max - 1;
     }
 
-
-    public static void main(String[] args) {
-        Solution1162 s = new Solution1162();
-        int[][] a ={{1,0,1},{0,0,0},{1,0,1}};
-        s.maxDistance(a);
-    }
-
-
 }

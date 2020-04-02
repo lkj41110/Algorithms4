@@ -35,9 +35,4 @@ public class Solution2 {
         return flag1 | flag2 | treeNode.val == 1;
     }
 
-    public static void main(String[] args) {
-        Solution2 solution = new Solution2();
-        TreeNode treeNode = new TreeNode(new int[]{1, -1, 0, 0, 1});
-        solution.pruneTree(treeNode);
-    }
 }

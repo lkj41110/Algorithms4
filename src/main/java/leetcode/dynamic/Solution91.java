@@ -40,16 +40,4 @@ public class Solution91 {
         return res + last_num;
     }
 
-    public static void main(String[] args) {
-        Solution91 solution = new Solution91();
-        //int[][] a = {{-2, -3, 3}, {-5, -10, 1}, {10, 30, -5}};
-        //Assert.assertEquals("10", solution.numDecodings("10"), 1);
-        //Assert.assertEquals("100", solution.numDecodings("100"), 0);
-        //Assert.assertEquals("01", solution.numDecodings("01"), 0);
-        //Assert.assertEquals("11", solution.numDecodings("11"), 2);
-        //Assert.assertEquals("17", solution.numDecodings("17"), 2);
-        //Assert.assertEquals("27", solution.numDecodings("27"), 1);
-        //Assert.assertEquals("112", solution.numDecodings("112"), 3);
-        //Assert.assertEquals("172", solution.numDecodings("172"), 2);
-    }
 }

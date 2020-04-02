@@ -65,11 +65,4 @@ public class Solution695 {
         return max;
     }
 
-    public static void main(String[] args) {
-        Solution695 solution = new Solution695();
-        int[][] a = {{1, 1, 0, 0, 0}, {1, 1, 0, 0, 0}, {0, 0, 0, 1, 1}, {0, 0, 0, 1, 1}};
-        System.out.println(solution.maxAreaOfIsland(a));
-    }
-
-
 }

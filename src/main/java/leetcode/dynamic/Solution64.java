@@ -24,11 +24,5 @@ public class Solution64 {
         return res[m - 1][n - 1];
     }
 
-    public static void main(String[] args) {
-        Solution64 solution = new Solution64();
-        int[][] a = {{1, 3, 1}, {1, 5, 1}, {4, 2, 1}};
-        System.out.println(solution.minPathSum(a));
-    }
-
 
 }
