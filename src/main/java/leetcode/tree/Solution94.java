@@ -94,9 +94,4 @@ public class Solution94 {
         return r;
     }
 
-    public static void main(String[] args) {
-        Solution94 solution = new Solution94();
-        List<Integer> integers = solution.inorderTraversal(new TreeNode(new int[]{}));
-        System.out.println(integers);
-    }
 }

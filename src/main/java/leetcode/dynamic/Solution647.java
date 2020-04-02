@@ -33,13 +33,5 @@ public class Solution647 {
         return res[chars.length - 1];
     }
 
-    public static void main(String[] args) {
-        Solution647 solution = new Solution647();
-        //int[][] a = {{-2, -3, 3}, {-5, -10, 1}, {10, 30, -5}};
-        System.out.println(solution.countSubstrings("aaaaa") );
-        //System.out.println(solution.countSubstrings("abc") == 3);
-        //System.out.println(solution.countSubstrings("aaa") == 6);
-    }
-
 
 }

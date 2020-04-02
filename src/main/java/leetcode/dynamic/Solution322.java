@@ -34,14 +34,6 @@ public class Solution322 {
         return res[amount] == Integer.MAX_VALUE ? -1 : res[amount];
     }
 
-    public static void main(String[] args) {
-        Solution322 solution = new Solution322();
-        //int[][] a = {{1, 3, 1}, {1, 5, 1}, {4, 2, 1}};
-        int[] a = {1, 2, 5};
-
-        System.out.println(solution.coinChange(a, 11));
-
-    }
 
 
 }

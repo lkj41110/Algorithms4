@@ -41,14 +41,5 @@ public class Solution1103 {
     }
 
 
-    public static void main(String[] args) {
-        Solution1103 solution = new Solution1103();
-        //int[] a = {0, 0, 0};
-        //int[] a = {0, 2, 2, 3, 0, 1, 2, 3, -1, -4, 2};
-        System.out.println(solution.distributeCandies(80, 4));
-        //int[] b = {3, 2, 3, 1, 2, 4, 5, 5, 6};
-        //System.out.println(solution.threeSum(b, 4));
-    }
-
 
 }

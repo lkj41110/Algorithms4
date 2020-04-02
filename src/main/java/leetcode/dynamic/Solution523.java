@@ -54,13 +54,5 @@ public class Solution523 {
         return false;
     }
 
-    public static void main(String[] args) {
-        Solution523 solution = new Solution523();
-        //int[] a = {1, 2, 12};
-        //System.out.println(solution.checkSubarraySum(a, 6));
-        int[] b = {1, 1};
-        System.out.println(solution.checkSubarraySum(b, -1));
-    }
-
 
 }

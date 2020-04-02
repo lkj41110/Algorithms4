@@ -55,10 +55,4 @@ public class Solution99 {
         temp1.val = temp2.val;
         temp2.val = tempValue;
     }
-
-    public static void main(String[] args) {
-        Solution99 solution = new Solution99();
-        solution.recoverTree(new TreeNode(new int[]{1,3,-1,-1,2}));
-
-    }
 }

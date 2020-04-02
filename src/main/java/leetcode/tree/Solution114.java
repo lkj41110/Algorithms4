@@ -38,11 +38,4 @@ public class Solution114 {
         return last;
     }
 
-
-    public static void main(String[] args) {
-        Solution114 solution = new Solution114();
-        //List<List<Integer>> lists = solution.combinationSum(new int[]{2, 3, 6, 7}, 7);
-        solution.flatten(new TreeNode(new int[]{1, 2, 5, 3, 4, -1, 6}));
-        //System.out.println(lists);
-    }
 }

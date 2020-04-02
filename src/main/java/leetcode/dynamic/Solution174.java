@@ -27,11 +27,4 @@ public class Solution174 {
         return res[0][0] > 0 ? 0 : 0 - res[0][0] + 1;
     }
 
-    public static void main(String[] args) {
-        Solution174 solution = new Solution174();
-        int[][] a = {{-2, -3, 3}, {-5, -10, 1}, {10, 30, -5}};
-        System.out.println(solution.minPathSum(a));
-    }
-
-
 }

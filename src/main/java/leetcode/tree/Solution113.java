@@ -103,9 +103,4 @@ public class Solution113 {
         return list;
     }
 
-    public static void main(String[] args) {
-        Solution113 solution = new Solution113();
-        //List<List<Integer>> lists = solution.pathSum(new TreeNode(new int[]{5,4,8,11,-1,13,4,7,2,-1,-1,5,1}),22);
-        List<List<Integer>> lists = solution.pathSum(new TreeNode(new int[]{1, 2}), 1);
-    }
 }

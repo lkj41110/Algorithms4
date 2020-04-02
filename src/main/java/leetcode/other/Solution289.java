@@ -66,13 +66,5 @@ public class Solution289 {
     }
 
 
-    public static void main(String[] args) {
-        Solution289 su = new Solution289();
-        //int[][] a = new int[][]{{0,1,0},{0,0,1},{1,1,1},{0,0,0}};
-        int[][] a = new int[][]{{0}};
-
-        su.gameOfLife(a);
-    }
-
 
 }

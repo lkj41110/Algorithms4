@@ -37,25 +37,6 @@ public class Solution347 {
         return min;
     }
 
-    public static void main(String[] args) {
-        Solution347 solution = new Solution347();
-        /* 1 0 1 0 0
-         * 1 0 1 1 1
-         * 1 1 1 1 1
-         * 1 0 0 1 0
-         */
-        //["1","0","1","0","0"]
-        //["1","0","1","1","1"]
-        //["1","1","1","1","1"]
-        //["1","0","0","1","0"]]
-        //char[][] a = {{'1', '0', '1', '0', '0'},
-        //        {'1', '0', '1', '1', '1'},
-        //        {'1', '1', '1', '1', '1'},
-        //        {'1', '0', '1', '1', '1'}};
-
-        char[][] a = {{'1'}};
-        System.out.println(solution.maximalSquare(a));
-    }
 
 
 }

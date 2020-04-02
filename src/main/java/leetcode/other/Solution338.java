@@ -23,12 +23,4 @@ public class Solution338 {
     }
 
 
-    public static void main(String[] args) {
-        Solution338 su = new Solution338();
-        int[] a = new int[]{1, 2, 3};
-        int[] subsets = su.countBits(5);
-        System.out.println(subsets);
-    }
-
-
 }

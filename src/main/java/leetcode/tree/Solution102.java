@@ -81,9 +81,4 @@ public class Solution102 {
         while (temp.size() > 0);
         return list;
     }
-
-    public static void main(String[] args) {
-        Solution102 solution = new Solution102();
-        List<List<Integer>> lists = solution.levelOrder(new TreeNode(new int[]{3, 9, 20, -1, -1, 15, 7}));
-    }
 }
