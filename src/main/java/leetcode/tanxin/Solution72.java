@@ -23,19 +23,11 @@ class Solution72 {
         for (int i = 1; i <= chars2.length; i++) {
             for (int j = 1; j <= chars1.length; j++) {
                 temp = chars2[i - 1] == chars1[j - 1] ? 0 : 1;
-                res[i][j] = res[i-1][j-1]+temp;
+                res[i][j] = res[i - 1][j - 1] + temp;
             }
         }
 
         return res[word2.length()][word1.length()];
     }
 
-    public static void main(String[] args) {
-        Solution72 a = new Solution72();
-        //System.out.println(a.minDistance("123", "1234"));
-        //System.out.println(a.minDistance("horse", "ros"));
-        //System.out.println(a.minDistance("intention", "execution"));
-        System.out.println(a.minDistance("zoologicoarchaeologist", "zoogeologist"));
-        //System.out.println(a.uniquePaths(7, 3));
-    }
 }

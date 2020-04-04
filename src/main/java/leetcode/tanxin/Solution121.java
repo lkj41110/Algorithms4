@@ -22,10 +22,4 @@ public class Solution121 {
         }
         return max;
     }
-
-    public static void main(String[] args) {
-        Solution121 a = new Solution121();
-        int[] b = {7,6,4,3,1};
-        System.out.println(a.maxProfit(b));
-    }
 }
