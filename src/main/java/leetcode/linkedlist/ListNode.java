@@ -8,6 +8,9 @@ public class ListNode {
         val = x;
     }
 
+    ListNode() {
+    }
+
     ListNode(int[] list) {
         val = list[0];
         ListNode temp = this;
