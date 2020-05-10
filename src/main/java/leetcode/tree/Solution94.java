@@ -62,7 +62,7 @@ public class Solution94 {
     public List<Integer> inorderTraversal(TreeNode root) {
 
         List<Integer> r = new ArrayList<>();
-        if(root==null){
+        if (root == null) {
             return r;
         }
         Stack<Pair<TreeNode, Integer>> stack = new Stack<>();
