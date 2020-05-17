@@ -86,18 +86,11 @@ public class MapSum {
         return node;
     }
 
-    public static void main(String[] args) {
-        MapSum mapSum = new MapSum();
-        mapSum.insert("apple", 3);
-        System.out.println(mapSum.sum("ap"));
-        mapSum.insert("app", 2);
-        System.out.println(mapSum.sum("ap"));
-    }
+    //public static void main(String[] args) {
+    //    MapSum mapSum = new MapSum();
+    //    mapSum.insert("apple", 3);
+    //    System.out.println(mapSum.sum("ap"));
+    //    mapSum.insert("app", 2);
+    //    System.out.println(mapSum.sum("ap"));
+    //}
 }
-
-/**
- * Your MapSum object will be instantiated and called as such:
- * MapSum obj = new MapSum();
- * obj.insert(key,val);
- * int param_2 = obj.sum(prefix);
- */
