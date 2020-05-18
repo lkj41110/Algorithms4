@@ -1,14 +1,6 @@
 package leetcode.dynamic;
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
- * }
- */
+
 class Solution152 {
     public int maxProduct(int[] nums) {
         int temp[][] = new int[nums.length][nums.length];
@@ -45,10 +37,46 @@ class Solution152 {
         return res;
     }
 
+    /**
+     * 三刷
+     * n 复杂度
+     *
+     * @param nums
+     * @return
+     */
+    public int maxProduct3(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        int re_max = nums[0];
+        int max = nums[0];
+        int min = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            int tMax = max * nums[i];
+            int tMin = min * nums[i];
+
+            max = Math.max(nums[i], Math.max(tMin, tMax));
+            min = Math.min(nums[i], Math.min(tMin, tMax));
+            re_max = Math.max(re_max, max);
+
+        }
+        return re_max;
+    }
+
     public static void main(String[] args) {
         Solution152 solution152 = new Solution152();
         int num[] = {1, 2, 3, 4};
-        int treeNodes = solution152.maxProduct2(num);
-        System.out.println(treeNodes);
+        System.out.println(solution152.maxProduct3(num) + " == " + 24);
+
+
+        int num1[] = {-5,-2,7};
+        System.out.println(solution152.maxProduct3(num1) + " == " + 70);
+
+        int num2[] = {5,-2,7};
+        System.out.println(solution152.maxProduct3(num2) + " == " + 7);
+
+        int num3[] = {2,3,-2,4};
+        System.out.println(solution152.maxProduct3(num3) + " == " + 6);
+
     }
 }

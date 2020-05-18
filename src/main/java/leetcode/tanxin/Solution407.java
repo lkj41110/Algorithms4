@@ -52,13 +52,13 @@ class Solution407 {
         return sum;
     }
 
-    public static void main(String[] args) {
-        int a[][] = new int[][]{
-                {1, 4, 3, 1, 3, 2},
-                {3, 2, 1, 3, 2, 4},
-                {2, 3, 3, 2, 3, 1}
-        };
-        Solution407 b = new Solution407();
-        b.trapRainWater(a);
-    }
+    //public static void main(String[] args) {
+    //    int a[][] = new int[][]{
+    //            {1, 4, 3, 1, 3, 2},
+    //            {3, 2, 1, 3, 2, 4},
+    //            {2, 3, 3, 2, 3, 1}
+    //    };
+    //    Solution407 b = new Solution407();
+    //    b.trapRainWater(a);
+    //}
 }
