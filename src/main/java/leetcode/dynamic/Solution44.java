@@ -46,21 +46,21 @@ public class Solution44 {
         }
         return r[s_l][p_l];
     }
-
-    public static void main(String[] args) {
-        Solution44 sl = new Solution44();
-        System.out.println(sl.isMatch("123", "") + "  false");
-        System.out.println(sl.isMatch("aa", "a") + "  false");
-        System.out.println(sl.isMatch("aa", "aa") + "  true");
-        System.out.println(sl.isMatch("aa", "*") + "  true");
-        System.out.println(sl.isMatch("cb", "?a") + "  false");
-        System.out.println(sl.isMatch("adceb", "*a*b") + "  true");
-        System.out.println(sl.isMatch("acdcb", "a*c?b") + "  false");
-        System.out.println(sl.isMatch("aab", "c*a*b") + "  false");
-
-        System.out.println(sl.isMatch("a", "a*") + "  true");
-        System.out.println(sl.isMatch("aaab", "b**") + "  true");
-
-    }
+    //
+    //public static void main(String[] args) {
+    //    Solution44 sl = new Solution44();
+    //    System.out.println(sl.isMatch("123", "") + "  false");
+    //    System.out.println(sl.isMatch("aa", "a") + "  false");
+    //    System.out.println(sl.isMatch("aa", "aa") + "  true");
+    //    System.out.println(sl.isMatch("aa", "*") + "  true");
+    //    System.out.println(sl.isMatch("cb", "?a") + "  false");
+    //    System.out.println(sl.isMatch("adceb", "*a*b") + "  true");
+    //    System.out.println(sl.isMatch("acdcb", "a*c?b") + "  false");
+    //    System.out.println(sl.isMatch("aab", "c*a*b") + "  false");
+    //
+    //    System.out.println(sl.isMatch("a", "a*") + "  true");
+    //    System.out.println(sl.isMatch("aaab", "b**") + "  true");
+    //
+    //}
 
 }
