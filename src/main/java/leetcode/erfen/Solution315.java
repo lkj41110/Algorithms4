@@ -18,6 +18,7 @@ public class Solution315 {
         return res;
     }
 
+    
     private int sort(int[] nums, int index, int length) {
         int temp = nums[index];
         int r = 0;
