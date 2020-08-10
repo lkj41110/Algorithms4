@@ -39,27 +39,18 @@ public class Solution63 {
         }
         int now = 0;
         int la = 0;
-        char la_ch = 'a';
+        char la_ch = '-';
         int res = 0;
+        s = s + '-';
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            if (now == 0) {
-                now++;
+            if (ch != la_ch) {
                 la_ch = ch;
-            } else if (ch == la_ch) {
-                now++;
-            } else {
-                if (la == 0) {
-                    la = now;
-                } else {
-                    res += Math.min(la, now);
-                }
-                now = 1;
-                la_ch = ch;
+                res += Math.min(la, now);
+                la = now;
+                now = 0;
             }
-        }
-        if (la != 0) {
-            res += Math.min(la, now);
+            now++;
         }
 
         return res;
