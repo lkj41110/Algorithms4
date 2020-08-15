@@ -1,8 +1,5 @@
 package leetcode.dfs;
 
-import java.util.PriorityQueue;
-import java.util.Queue;
-
 /**
  * 深搜
  * 输入: nums =
@@ -23,27 +20,29 @@ public class Solution329 {
             return 0;
         }
 
-        Queue<int[]> qu = new PriorityQueue<>((a, b) -> a[0] - b[0]);
-        for (int i = 0; i < h; i++) {
-            for (int j = 0; j < w; j++) {
-                int[] index = {matrix[i][j], i, j};
-                qu.add(index);
-            }
-        }
+        //Queue<int[]> qu = new PriorityQueue<>((a, b) -> a[0] - b[0]);
+        //for (int i = 0; i < h; i++) {
+        //    for (int j = 0; j < w; j++) {
+        //        int[] index = {matrix[i][j], i, j};
+        //        qu.add(index);
+        //    }
+        //}
 
 
         int[][] value = new int[h][w];
         int max = 0;
-        while (qu.size() > 0) {
-            int[] poll = qu.poll();
-            int x = poll[1];
-            int y = poll[2];
-            if (value[x][y] != 0) {
-                continue;
+        //while (qu.size() > 0) {
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
+                //int[] poll = qu.poll();
+                //int x = poll[1];
+                //int y = poll[2];
+                if (value[i][j] != 0) {
+                    continue;
+                }
+
+                max = Math.max(dfs(i, j, value, h, w, matrix), max);
             }
-
-            max = Math.max(dfs(x, y, value, h, w, matrix), max);
-
         }
         return max;
 
