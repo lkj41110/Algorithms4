@@ -7,6 +7,7 @@ import java.util.Queue;
  * 广搜， 多源发散
  */
 public class Solution1162 {
+
     public int maxDistance(int[][] grid) {
         int[][] d = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
